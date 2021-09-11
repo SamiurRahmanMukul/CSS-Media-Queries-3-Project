@@ -1,0 +1,77 @@
+@import "./include/variable";
+@import "./include/universal-selectors";
+
+// DIFFERENT SCREEN-SIZE COLOR VARIABLE
+$color-1: #cdb4db; // Mobile
+$color-2: #fff1e6; // Tablet
+$color-3: #52b788; // Laptop
+$color-4: #bee1e6; // Desktop
+
+// DIFFERENT SCREEN-SIZE BREAKPOINTS
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+.container {
+  height: 100vh;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  display: grid;
+  place-content: center;
+  background: white;
+
+  .text {
+    top: -10%;
+    font-size: 40px;
+  }
+}
+
+#screen-size {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  font-size: 40px;
+}
+
+// !MAX-WIDTH = inside applied
+// !MIN-WIDTH = outside applied
+
+/*  Common Breakpoints: Is there a Standard Resolution?
+      320px — 480px: Mobile devices.
+      481px — 768px: iPads, Tablets.
+      769px — 1024px: Small screens, laptops.
+      1025px — 1200px: Desktops, large screens.
+      1201px and more — Extra large screens, TV.
+*/
+
+// !MOBILE DEVICE
+@media screen and (max-width: $mobile) {
+  .container {
+    background-color: $color-1;
+  }
+}
+// !TABLET DEVICE
+@media screen and (max-width: $tablet) {
+  .container {
+    background-color: $color-2;
+  }
+}
+// !LAPTOP DEVICE
+@media screen and (max-width: $laptop) {
+  .container {
+    background-color: $color-3;
+  }
+}
+// !DESKTOP DEVICE
+@media screen and (max-width: $desktop) {
+  .container {
+    background-color: $color-4;
+  }
+}

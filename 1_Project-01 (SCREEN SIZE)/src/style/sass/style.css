@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* ===============
+      VARIABLES
+  =============== */
+/* COLORS */
+/* TRANSITIONS */
+/* ========================
+      UNIVERSAL SELECTORS
+  ======================== */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: white;
+}
+
+.container .text {
+  top: -10%;
+  font-size: 40px;
+}
+
+#screen-size {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  font-size: 40px;
+}
+
+/*  Common Breakpoints: Is there a Standard Resolution?
+      320px — 480px: Mobile devices.
+      481px — 768px: iPads, Tablets.
+      769px — 1024px: Small screens, laptops.
+      1025px — 1200px: Desktops, large screens.
+      1201px and more — Extra large screens, TV.
+*/
+@media screen and (max-width: 576px) {
+  .container {
+    background-color: #cdb4db;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: #fff1e6;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    background-color: #52b788;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    background-color: #bee1e6;
+  }
+}
+/*# sourceMappingURL=style.css.map */

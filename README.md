@@ -1,1 +1,1 @@
-# css-media-queries-3-project
+# Learn `CSS Media Queries` Build 3 Project

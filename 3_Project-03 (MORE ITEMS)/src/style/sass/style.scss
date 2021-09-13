@@ -1,0 +1,46 @@
+// include partials
+@import "./include/universal-selectors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 20px;
+
+  // select all rows
+  [class^="row-"] {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    // select all boxes
+    [class^="box-"] {
+      background-color: grey;
+      border: 2px solid black;
+
+      width: (100vw) / 3;
+      height: (100vh) / 3;
+
+      display: grid;
+      place-items: center;
+
+      font-size: 50px;
+      font-weight: bold;
+    }
+  }
+}
+
+// media queries applied
+@media (max-width: 650px) {
+  .container {
+    // justify-content: center;
+
+    [class^="row-"] {
+      flex-direction: column;
+
+      [class^="box-"] {
+        width: 100%;
+      }
+    }
+  }
+}
